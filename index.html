@@ -49,8 +49,9 @@ button:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
 .hero .seal{margin-top:auto;margin-bottom:12vh}
 .homeinfo{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--ink3);padding:8px 2px;gap:8px}
 .cloud{display:inline-flex;align-items:center;gap:6px}
-.cloud i{display:block;width:44px;height:6px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
-.cloud i b{position:absolute;inset:0 auto 0 0;background:var(--gold)}
+.cloud .xy{display:block}
+.cloud.full .xy{animation:glow 2.4s ease-in-out infinite}
+@keyframes glow{50%{filter:drop-shadow(0 0 4px rgba(148,113,31,.7))}}
 .homebtns{display:grid;gap:10px;padding-bottom:6px}
 .homebtns .row .btn{min-height:50px;font-size:16px}
 .snd{font-size:14px;color:var(--ink3);padding:6px 4px;min-height:44px}
@@ -205,11 +206,11 @@ button:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
   <div class="seal" id="homeSeal"></div>
  </div>
  <div>
-  <div class="homeinfo"><span id="homeLives"></span><span class="cloud" title="祥瑞之氣">祥雲<i><b id="cloudBar"></b></i></span></div>
+  <div class="homeinfo"><span id="homeLives"></span><span class="cloud" id="cloud1" title="祥雲"></span></div>
   <div class="homebtns">
    <button class="btn main" id="goRoll">入 世</button>
    <div class="row"><button class="btn" id="goBook">印 譜</button><button class="btn" id="goHall">頭 銜</button></div>
-   <button class="snd" id="sndBtn">琴音：關</button>
+   <button class="snd" id="sndBtn">鼓聲：關</button>
    <p class="privacy" id="privacy" hidden>本遊戲會匿名記錄每一世的天賦、選擇與結局，用來調整平衡；不收集姓名、帳號或任何個人資料。</p>
   </div>
  </div>
@@ -221,7 +222,7 @@ button:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
   <div class="who"><b id="rollName"></b><span id="rollMeta"></span></div>
   <div class="slots" id="slots"></div>
   <div class="chips" id="boonChips"></div>
-  <div class="streak"><span id="streakTxt"></span><span class="cloud">祥雲<i><b id="cloudBar2"></b></i></span></div>
+  <div class="streak"><span id="streakTxt"></span><span class="cloud" id="cloud2" title="祥雲"></span></div>
  </div>
  <div class="dock"><div class="row"><button class="btn" id="reroll">洗天賦</button><button class="btn main" id="startLife">投 胎</button></div></div>
 </section>
