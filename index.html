@@ -284,8 +284,9 @@ button.chip{font:inherit;cursor:pointer}
 .effopt.evil b{color:var(--zhu)}
 .three{display:grid;gap:4px;text-align:left;font-size:14px;line-height:1.55;color:var(--ink2);background:rgba(29,27,24,.04);padding:8px 10px;border-radius:3px}
 .three b{font-family:var(--display);color:var(--ink)}
-.tabs{grid-template-columns:repeat(6,1fr) 40px}
-.tabs .gear{display:grid;place-items:center;color:var(--ink2);border-bottom:2px solid transparent}
+.hud .top{align-items:center}
+.hud .top .cog{flex:none;display:grid;place-items:center;width:40px;height:40px;margin:-6px -8px -6px 0;color:var(--ink2);border-radius:50%}
+.hud .top .cog:active{background:var(--paper2)}
 .setbox{max-height:calc(100% - 20px);overflow-y:auto;gap:14px}
 .setrow{display:grid;grid-template-columns:1fr auto;gap:6px 10px;align-items:center;text-align:left;border-bottom:1px solid var(--line);padding-bottom:12px}
 .setrow .sl{display:grid}
@@ -347,13 +348,13 @@ button.chip{font:inherit;cursor:pointer}
 
 <section id="life" class="screen" hidden>
  <div class="hud">
-  <div class="top"><span class="nm" id="hudName"></span><span class="age" id="hudAge"></span><span class="role" id="hudRole"></span></div>
+  <div class="top"><span class="nm" id="hudName"></span><span class="age" id="hudAge"></span><span class="role" id="hudRole"></span><button class="cog" title="設定" id="setBtn" aria-label="設定"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button></div>
   <div class="stats" id="stats"></div>
   <div class="hprow" data-stat="hp"><em>氣血</em><div class="hp"><u id="hpBar"></u></div><b id="hpTxt"></b></div>
   <button class="effrow" id="effBtn"></button>
   <div class="chips" id="hudChips"></div>
  </div>
- <nav id="tabs" class="tabs" aria-label="江湖面板"><button data-tab="life" class="on">人生</button><button data-tab="news">情勢</button><button data-tab="arts">武學</button><button data-tab="bag">行囊</button><button data-tab="bond">羈絆</button><button data-tab="gloss">百曉</button><button class="gear" id="setBtn" aria-label="設定"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button></nav>
+ <nav id="tabs" class="tabs" aria-label="江湖面板"><button data-tab="life" class="on">人生</button><button data-tab="news">情勢</button><button data-tab="arts">武學</button><button data-tab="bag">行囊</button><button data-tab="bond">羈絆</button><button data-tab="gloss">百曉</button></nav>
  <div class="scroll" id="streamWrap"><div id="stream"></div></div>
  <div class="scroll" id="panel" hidden></div>
  <div id="dock"></div>
