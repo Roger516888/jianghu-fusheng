@@ -193,6 +193,60 @@ button.chip{font:inherit;cursor:pointer}
 .boon b{font-family:var(--display);font-size:18px;color:var(--gold);letter-spacing:.1em}
 .boon span{font-size:15px;color:var(--ink2)}
 .boon:active{background:rgba(148,113,31,.16)}
+
+.tabs{display:grid;grid-template-columns:repeat(6,1fr);border-bottom:1px solid var(--line)}
+.tabs button{min-height:40px;font-family:var(--display);font-weight:700;font-size:14.5px;color:var(--ink2);border-bottom:2px solid transparent;letter-spacing:.08em}
+.tabs button.on{color:var(--zhu);border-bottom-color:var(--zhu)}
+#panel{padding:10px 0}
+#panel .empty{color:var(--ink3)}
+.pnote{font-size:14px;color:var(--ink2);margin:6px 0 10px;font-weight:700}
+.nw{padding:8px 0 8px 10px;border-left:3px solid var(--line);margin-bottom:8px}
+.nw .nh{display:flex;justify-content:space-between;font-size:13px;color:var(--ink3)}
+.nw .nh b{font-family:var(--display);color:var(--indigo)}
+.nw.c-大事{border-left-color:var(--zhu)} .nw.c-大事 .nh b{color:var(--zhu)}
+.nw.c-邪道 .nh b{color:#7A2E68} .nw.c-朝廷 .nh b{color:var(--gold)} .nw.c-民生 .nh b{color:var(--jade)}
+.nw p{margin:2px 0 0;font-size:16px;line-height:1.6}
+.art{border-bottom:1px solid var(--line);padding:8px 0}
+.art summary{display:flex;gap:8px;align-items:baseline;cursor:pointer;list-style:none;flex-wrap:wrap}
+.art summary b{font-family:var(--display);font-size:17px}
+.art .tier{font-size:12px;padding:0 6px;border-radius:2px;background:var(--ink2);color:var(--paper);font-family:var(--display)}
+.art .t-鎮派{background:var(--gold)} .art .t-親傳{background:#7A2E68} .art .t-內門{background:var(--indigo)} .art .t-外門{background:var(--jade)} .art .t-奇遇{background:var(--zhu)} .art .t-邪功{background:#5a1712} .art .t-通俗{background:var(--ink3)}
+.art .ty{font-size:13px;color:var(--ink3)}
+.art p{margin:6px 0 0;font-size:15px;line-height:1.6}
+.art .mv{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.art .mv span{font-size:14px;border:1px solid var(--line);padding:1px 8px;border-radius:2px;font-weight:700}
+.how{color:var(--ink3);font-size:13px!important}
+.gear{border-bottom:1px solid var(--line);padding:8px 0;display:grid;gap:2px}
+.gear .sl{font-size:12px;color:var(--ink3);font-family:var(--display);letter-spacing:.2em}
+.gear b{font-family:var(--display);font-size:17px}
+.gear .gd{font-size:13.5px;color:var(--ink2);font-weight:700}
+.gear p{margin:0;font-size:14.5px;line-height:1.55}
+.bond{border-bottom:1px solid var(--line);padding:8px 0}
+.bond .bh{display:flex;justify-content:space-between;align-items:baseline}
+.bond .bh b{font-family:var(--display);font-size:17px}
+.bond .bh span{font-size:13.5px;color:var(--jade);font-weight:700}
+.bond .bh span.neg{color:var(--zhu)}
+.pips{display:flex;gap:4px;align-items:center;margin:2px 0;font-size:12.5px;color:var(--ink3)}
+.pips i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--gold);display:block}
+.pips i.on{background:var(--gold)}
+.pips span{margin-left:6px}
+.bond p{margin:2px 0 0;font-size:14.5px;line-height:1.55}
+.gl{margin-top:4px;font-size:13.5px;color:var(--ink2);line-height:1.5;border-left:2px solid var(--indigo);padding-left:8px}
+.gl b{font-family:var(--display);color:var(--indigo);margin-right:6px}
+.gl.big{font-size:15px;margin-bottom:8px}
+.fx .bd{color:var(--indigo)}
+.card .tg.life{background:var(--zhu);color:var(--paper)}
+.nick{font-size:12px;margin-left:6px;padding:0 6px;background:var(--zhu);color:var(--paper);border-radius:2px;letter-spacing:.1em;vertical-align:middle}
+.hud .age small{font-size:11.5px;color:var(--ink3);margin-left:4px;font-weight:500}
+.choices.four .btn{min-height:70px}
+.btn.opt{flex-direction:column;gap:2px;position:relative;padding-top:14px}
+.btn.opt .stc{position:absolute;left:6px;top:4px;font-style:normal;font-size:11px;letter-spacing:.1em;font-family:var(--display);padding:0 5px;border-radius:2px;color:var(--paper)}
+.btn.opt small{font-family:var(--body);font-weight:400;font-size:12.5px;color:var(--ink2);letter-spacing:0;line-height:1.35}
+.s-chong .stc{background:var(--zhu)} .s-ji .stc{background:var(--gold)} .s-bao .stc{background:var(--indigo)} .s-tui .stc{background:var(--ink3)}
+.btn.s-chong{border-color:var(--zhu)}
+.choices .btn.sp small{color:var(--gold)}
+.verdict .tl{display:block;margin-top:8px;font-size:16px;color:var(--ink2)}
+.verdict .tl2{display:block;margin-top:6px;font-size:14px;color:var(--zhu);font-weight:700}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -246,7 +300,9 @@ button.chip{font:inherit;cursor:pointer}
   <div class="hp"><u id="hpBar"></u></div>
   <div class="chips" id="hudChips"></div>
  </div>
+ <nav id="tabs" class="tabs" aria-label="江湖面板"><button data-tab="life" class="on">人生</button><button data-tab="news">情勢</button><button data-tab="arts">武學</button><button data-tab="bag">行囊</button><button data-tab="bond">羈絆</button><button data-tab="gloss">百曉</button></nav>
  <div class="scroll" id="streamWrap"><div id="stream"></div></div>
+ <div class="scroll" id="panel" hidden></div>
  <div id="dock"></div>
 </section>
 
@@ -274,8 +330,8 @@ button.chip{font:inherit;cursor:pointer}
  <div class="scroll"><div class="hall" id="hallList"></div><div class="sec">成就</div><div class="hall" id="achList"></div></div>
 </section>
 
-<script src="config.js"></script>
-<script src="app.js"></script>
+<script src="config.js?v=e900c7aa"></script>
+<script src="app.js?v=e900c7aa"></script>
 
 </body>
 </html>
