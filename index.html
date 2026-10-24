@@ -265,6 +265,25 @@ button.chip{font:inherit;cursor:pointer}
 .card .nb{font-size:12px;color:var(--ink3);font-weight:500}
 .card.hint p{font-size:16.5px;color:var(--ink2)}
 #stream,#panel,#dock{zoom:var(--fz,1)}
+.effrow{display:flex;align-items:center;gap:8px;min-height:34px;padding:2px 8px;border:1px solid var(--jade);border-radius:3px;background:rgba(63,94,82,.07);font-size:14px;color:var(--ink);text-align:left}
+.effrow em{font-style:normal;font-family:var(--display);font-weight:900;color:var(--jade);letter-spacing:.1em}
+.effrow b{font-family:var(--display);font-size:15px}
+.effrow span{color:var(--ink2);font-size:13px}
+.effrow i{margin-left:auto;font-style:normal;font-size:13px;color:var(--jade);font-weight:700}
+.effrow[disabled]{opacity:.6}
+.fx .ef{color:var(--jade)}
+.card .tg.op{color:var(--gold);border-color:var(--gold)}
+.card .tg.ft{color:var(--ink2);border-color:var(--ink3)}
+.save{margin-top:6px;padding:4px 8px;border-left:3px solid var(--jade);background:rgba(63,94,82,.08);font-size:15px;font-weight:700;color:var(--jade)}
+.effopt{display:grid;gap:2px;text-align:left;padding:10px 12px;border:1px solid var(--line);border-radius:3px;background:rgba(236,229,212,.8)}
+.effopt.on{border:2px solid var(--jade);background:rgba(63,94,82,.1)}
+.effopt .eh{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.effopt b{font-family:var(--display);font-size:18px}
+.effopt .lv{font-size:13px;color:var(--jade);font-weight:700}
+.effopt p{margin:0;font-size:14px;color:var(--ink2);line-height:1.55;text-align:left}
+.effopt.evil b{color:var(--zhu)}
+.three{display:grid;gap:4px;text-align:left;font-size:14px;line-height:1.55;color:var(--ink2);background:rgba(29,27,24,.04);padding:8px 10px;border-radius:3px}
+.three b{font-family:var(--display);color:var(--ink)}
 .tabs{grid-template-columns:repeat(6,1fr) 40px}
 .tabs .gear{display:grid;place-items:center;color:var(--ink2);border-bottom:2px solid transparent}
 .setbox{max-height:calc(100% - 20px);overflow-y:auto;gap:14px}
@@ -331,6 +350,7 @@ button.chip{font:inherit;cursor:pointer}
   <div class="top"><span class="nm" id="hudName"></span><span class="age" id="hudAge"></span><span class="role" id="hudRole"></span></div>
   <div class="stats" id="stats"></div>
   <div class="hprow" data-stat="hp"><em>氣血</em><div class="hp"><u id="hpBar"></u></div><b id="hpTxt"></b></div>
+  <button class="effrow" id="effBtn"></button>
   <div class="chips" id="hudChips"></div>
  </div>
  <nav id="tabs" class="tabs" aria-label="江湖面板"><button data-tab="life" class="on">人生</button><button data-tab="news">情勢</button><button data-tab="arts">武學</button><button data-tab="bag">行囊</button><button data-tab="bond">羈絆</button><button data-tab="gloss">百曉</button><button class="gear" id="setBtn" aria-label="設定"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button></nav>
@@ -363,8 +383,8 @@ button.chip{font:inherit;cursor:pointer}
  <div class="scroll"><div class="hall" id="hallList"></div><div class="sec">成就</div><div class="hall" id="achList"></div></div>
 </section>
 
-<script src="config.js?v=880711aa"></script>
-<script src="app.js?v=880711aa"></script>
+<script src="config.js?v=db5bb229"></script>
+<script src="app.js?v=db5bb229"></script>
 
 </body>
 </html>
